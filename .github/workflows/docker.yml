@@ -30,5 +30,6 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: oaviles/api:${{ github.sha }}
+          load: true
           
         
