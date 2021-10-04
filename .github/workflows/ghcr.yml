@@ -22,8 +22,10 @@ jobs:
           #context: .
           #file: ./Dockerfile
           #platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x
-          #platforms: linux/amd64
+          platforms: linux/amd64
           push: true
-          tags: oaviles/api:latest
+          tags: |
+            ghcr.io/oaviles/api:latest
+            ghcr.io/oaviles/api:${{ github.sha }}
           #labels: ${{ steps.meta.outputs.labels }}
 
