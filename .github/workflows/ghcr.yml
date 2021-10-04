@@ -26,6 +26,8 @@ jobs:
           push: true
           tags: |
             ghcr.io/oaviles/api:latest
-            ghcr.io/oaviles/api:${{ github.sha }}
+            
+          #ghcr.io/oaviles/api:${{ github.sha }}
+          
           #labels: ${{ steps.meta.outputs.labels }}
 
