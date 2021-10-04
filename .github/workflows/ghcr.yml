@@ -16,8 +16,14 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Build and Push Image to GitHub Registry
+        uses: docker/build-push-action@v2
         #working-directory: /src
-        run: |
-          docker build . -t ghcr.io/OWNER/api:latest
-          docker push ghcr.io/OWNER/api:latest
+        with:
+          context: .
+          file: ./Dockerfile
+          platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x
+          push: true
+          tags: |
+            user/app:latest
+            ghcr.io/user/app:latest
 
