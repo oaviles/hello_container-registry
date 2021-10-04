@@ -19,6 +19,7 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: ghcr.io/api
+          tags: latest
 
       
       - name: Build and Push Image to GitHub Registry
@@ -29,6 +30,6 @@ jobs:
           #file: ./Dockerfile
           #platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x
           push: true
-          tags: latest
+          tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
