@@ -27,4 +27,5 @@ jobs:
           context: .
           push: true
           tags: ${{ github.sha }}
+          labels: ${{ steps.meta.outputs.labels }}
         
