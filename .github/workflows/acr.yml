@@ -32,7 +32,7 @@ jobs:
           login-server: ${{env.ACR_REGISTRY}}
           
       - name: Build and Push Image to ACR
-        working-directory: src
+        #working-directory: src
         run: |
           docker build . -t ${{env.ACR_REGISTRY}}/${{env.image_name}}:${{ env.tag }}
           docker push ${{env.ACR_REGISTRY}}/${{env.image_name}}:${{ env.tag }}
