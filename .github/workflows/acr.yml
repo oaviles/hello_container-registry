@@ -8,7 +8,8 @@ on: workflow_dispatch
 env:
   ACR_REGISTRY: ${{ secrets.CONTAINER_REGISTRY }}
   image_name: api
-  tag: ${{ github.sha }}
+  #tag: ${{ github.sha }}
+  tag: latest
 
 jobs:
   # This workflow contains a job called "build"
