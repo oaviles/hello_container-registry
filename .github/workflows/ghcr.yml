@@ -26,4 +26,6 @@ jobs:
           push: true
           tags: ghcr.io/oaviles/api:latest
           #labels: ${{ steps.meta.outputs.labels }}
+          secrets: |
+            GIT_AUTH_TOKEN=${{ secrets.GITHUB_TOKEN }}
 
