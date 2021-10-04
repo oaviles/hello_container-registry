@@ -20,6 +20,7 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: oaviles/api
+          tags: ${{ github.sha }}
       
       - name: Build and push
         uses: docker/build-push-action@v2
