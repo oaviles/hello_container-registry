@@ -16,7 +16,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Build and Push Image to GitHub Registry
-        #working-directory: src
+        working-directory: /
         run: |
           docker build . -t ghcr.io/api:latest
           docker push ghcr.io/api:latest
