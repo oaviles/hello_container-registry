@@ -6,7 +6,7 @@ name: Push image to ACR
 on: workflow_dispatch
 
 env:
-  ACR_REGISTRY: ${{ secrets.CONTAINER_REGISTRY }}
+  ACR_REGISTRY: '${{ secrets.CONTAINER_REGISTRY }}'
   image_name: api
   tag: ${{ github.sha }}
 
