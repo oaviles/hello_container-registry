@@ -19,8 +19,8 @@ jobs:
           ECR_REPOSITORY: public.ecr.aws/k2a4s6i2/oaviles
           IMAGE_TAG: ${{ github.sha }}
         run: |
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+          docker build -t public.ecr.aws/k2a4s6i2/oaviles:$IMAGE_TAG .
+          docker push public.ecr.aws/k2a4s6i2/oaviles:$IMAGE_TAG
           
           
           
