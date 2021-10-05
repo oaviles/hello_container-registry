@@ -20,5 +20,5 @@ jobs:
           #file: ./Dockerfile
           #platforms: linux/amd64
           push: true
-          tags: us-central1-docker.pkg.dev/api:${{ github.sha }}    
+          tags: us-central1-docker.pkg.dev/oa-project-320014/oaviles/api:${{ github.sha }}    
           
