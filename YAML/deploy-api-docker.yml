@@ -35,11 +35,3 @@ spec:
           limits: # maximum resources allocated
             cpu: 500m
             memory: 256Mi
-        readinessProbe: # is the container ready to receive traffic?
-          httpGet:
-            port: 3000
-            path: /healthz
-        livenessProbe: # is the container healthy?
-          httpGet:
-            port: 3000
-            path: /healthz
