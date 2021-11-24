@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: api
-        image: <acrname>.azurecr.io/api # IMPORTANT: update with your own repository
+        image: acraksworkshop.azurecr.io/api # IMPORTANT: update with your own repository
         imagePullPolicy: Always
         ports:
         - containerPort: 3000 # the application listens to this port
