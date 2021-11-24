@@ -18,4 +18,4 @@ jobs:
         namespace: 'api'
         manifests: |
           YAML/create-ns.yaml
-          YAML/deploy-api-acr.yml
+          YAML/deploy-api-docker.yml
