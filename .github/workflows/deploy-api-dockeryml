@@ -1,7 +1,7 @@
 on: [workflow_dispatch]
-name: Deploy API
+name: Deploy API from Docker Hub
 jobs:
-  build:
+  deploy-api-from-dockerhub:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
