@@ -17,5 +17,4 @@ jobs:
       with:
         namespace: 'api'
         manifests: |
-          YAML/create-ns.yaml
           YAML/deploy-api-docker.yml
