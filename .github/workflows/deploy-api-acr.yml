@@ -19,4 +19,4 @@ jobs:
         images: '${{ secrets.CONTAINER_REGISTRY }}:latest'
         manifests: |
           YAML/create-ns.yaml
-          YAML/deploy-api.yml
+          YAML/deploy-api-acr.yml
