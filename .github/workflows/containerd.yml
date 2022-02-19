@@ -4,7 +4,7 @@ on: workflow_dispatch
 
 env:
   ACR_REGISTRY: docker.io/oaviles
-  image_name: diun
+  image_name: api-containerd
   tag: latest
 
 jobs:
