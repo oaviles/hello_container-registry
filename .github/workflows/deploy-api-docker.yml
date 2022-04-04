@@ -1,5 +1,5 @@
 on: [workflow_dispatch]
-name: Deploy API from Docker Hub
+name: Deploy API (Docker) to AKS
 jobs:
   deploy-api-from-dockerhub:
     runs-on: ubuntu-latest
