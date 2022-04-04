@@ -1,3 +1,4 @@
+name: Deploy API to AKS
 on: workflow_dispatch
 jobs:
   build-and-deploy:
