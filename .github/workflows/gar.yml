@@ -23,6 +23,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ${{ env.GCP_REGISTRY_REGION }}/${{ env.GCP_PROJECT }}/${{ env.GCP_REGISTRY_NAME }}/${{ env.IMAGE_NAME }}:latest  
-          #tags: ${{ env.GCP_REGISTRY_REGION }}/${{ env.GCP_PROJECT }}/${{ env.GCP_REGISTRY_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}  
+          #tags: ${{ env.GCP_REGISTRY_REGION }}/${{ env.GCP_PROJECT }}/${{ env.GCP_REGISTRY_NAME }}/${{ env.IMAGE_NAME }}:latest  
+          tags:  us-central1-docker.pkg.dev/oa-project-320014/oa/ratings-api:${{ github.sha }}  
           
