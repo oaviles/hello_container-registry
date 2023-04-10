@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Push image to GitHub Registry
+name: Push image to GitHub Packages
 
 on: workflow_dispatch
 
