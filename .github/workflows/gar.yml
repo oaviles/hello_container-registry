@@ -5,7 +5,7 @@ on: workflow_dispatch
 env: 
   GCP_PROJECT: ${{ secrets.GCP_PROJECT }}
   GCP_REGISTRY_REGION: us-central1
-  GCP_REGISTRY_NAME: oa
+  GCP_REGISTRY_NAME: oaviles
   IMAGE_NAME: ratings-api
 
 jobs:
