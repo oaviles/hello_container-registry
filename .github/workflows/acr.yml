@@ -7,7 +7,7 @@ on: workflow_dispatch
 
 env:
   ACR_REGISTRY: ${{ secrets.CONTAINER_REGISTRY }}
-  image_name: api
+  image_name: ratings-api
   #tag: ${{ github.sha }}
   tag: latest
 
