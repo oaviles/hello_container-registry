@@ -12,7 +12,7 @@ env:
   #TAG: latest
 
 jobs:
-  login:
+  build-image:
     runs-on: ubuntu-latest
     steps:
       - name: Login to GitHub Container Registry
