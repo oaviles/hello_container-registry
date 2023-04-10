@@ -4,6 +4,12 @@ name: Push image to GitHub Registry
 
 on: workflow_dispatch
 
+env:
+  GIHUB_REGISTRY: ghcr.io/oaviles
+  IMAGE_NAME: api
+  TAG: ${{ github.sha }}
+  #TAG: latest
+
 jobs:
   login:
     runs-on: ubuntu-latest
@@ -25,9 +31,8 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/oaviles/api:latest
+            ${{ env.GIHUB_REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
             
           #ghcr.io/oaviles/api:${{ github.sha }}
           
-          #labels: ${{ steps.meta.outputs.labels }}
 
