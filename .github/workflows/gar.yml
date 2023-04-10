@@ -1,4 +1,4 @@
-name: Push image to GAR
+name: Push image to Google Artifact Registry (GAR)
 
 on: workflow_dispatch
 
