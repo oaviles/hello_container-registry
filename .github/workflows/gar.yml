@@ -4,7 +4,7 @@ on: workflow_dispatch
 
 env: 
   GCP_PROJECT: ${{ secrets.GCP_PROJECT }}
-  GCP_REGISTRY_REGION: us-central1-docker.pkg.dev
+  GCP_REGISTRY_REGION: us-central1
   GCP_REGISTRY_NAME: oaviles
   IMAGE_NAME: ratings-api
 
@@ -18,6 +18,11 @@ jobs:
           registry: us-centra1-docker.pkg.dev
           username: _json_key
           password: ${{ secrets.GAR_JSON_KEY }}
+          
+      - name: Build and Push Container
+        run: |-
+          docker build -t "${{ env.GCP_REGISTRY_REGION }}-docker.pkg.dev/${{ env.GCP_PROJECT }}/${{ env.GCP_REGISTRY_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}" ./
+          docker push "${{ env.GCP_REGISTRY_REGION }}-docker.pkg.dev/${{ env.GCP_PROJECT }}/${{ env.GCP_REGISTRY_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }"
           
       - name: Build and push to GAR
         uses: docker/build-push-action@v2
