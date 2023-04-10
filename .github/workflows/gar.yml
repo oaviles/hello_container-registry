@@ -5,7 +5,7 @@ on: workflow_dispatch
 env: 
   GCP_PROJECT: ${{ secrets.GCP_PROJECT }}
   GCP_REGISTRY_REGION: us-central1-docker.pkg.dev
-  GCP_REGISTRY_NAME: oa
+  GCP_REGISTRY_NAME: oaviles
   IMAGE_NAME: ratings-api
 
 jobs:
@@ -24,5 +24,5 @@ jobs:
         with:
           push: true
           #tags: ${{ env.GCP_REGISTRY_REGION }}/${{ env.GCP_PROJECT }}/${{ env.GCP_REGISTRY_NAME }}/${{ env.IMAGE_NAME }}:latest  
-          tags:  us-central1-docker.pkg.dev/oa-project-320014/oaviles/ratings-api:${{ github.sha }}  
+          tags:  us-central1-docker.pkg.dev/oa-project-320014/{{ env.GCP_REGISTRY_NAME }}/ratings-api:${{ github.sha }}  
           
