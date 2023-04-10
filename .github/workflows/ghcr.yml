@@ -8,8 +8,8 @@ env:
   GIHUB_REGISTRY: ghcr.io
   PACKAGE_NAME: oaviles
   IMAGE_NAME: api
-  TAG: ${{ github.sha }}
-  #TAG: latest
+  #TAG: ${{ github.sha }}
+  TAG: latest
 
 jobs:
   build-image:
@@ -33,7 +33,5 @@ jobs:
           push: true
           tags: |
             ${{ env.GIHUB_REGISTRY }}/${{ env.PACKAGE_NAME }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
-            
-          #ghcr.io/oaviles/api:${{ github.sha }}
           
 
