@@ -2,6 +2,12 @@ name: Push image to GAR
 
 on: workflow_dispatch
 
+env: 
+  GCP_PROJECT: ${{ secrets.GCP_PROJECT }}
+  GCP_REGISTRY_REGION: us-central1-docker.pkg.dev
+  GCP_REGISTRY_NAME: oa
+  IMAGE_NAME: ratings-api
+
 jobs:
   login:
     runs-on: ubuntu-latest
@@ -17,7 +23,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: us-central1-docker.pkg.dev/oa-project-320014/oaviles/api:latest  
-          
-          #tags: us-central1-docker.pkg.dev/oa-project-320014/oaviles/api:${{ github.sha }}  
+          tags: ${{ env.GCP_REGISTRY_REGION }}/${{ env.GCP_PROJECT }}/${{ env.GCP_REGISTRY_NAME }}/${{ env.IMAGE_NAME }}:latest  
+          #tags: ${{ env.GCP_REGISTRY_REGION }}/${{ env.GCP_PROJECT }}/${{ env.GCP_REGISTRY_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}  
           
