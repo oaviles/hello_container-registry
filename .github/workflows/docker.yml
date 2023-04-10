@@ -22,6 +22,6 @@ jobs:
           #file: ./Dockerfile
           #platforms: linux/amd64
           push: true
-          tags: oaviles/api:${{ github.sha }}
+          tags: oaviles/ratings-api:${{ github.sha }}
           
         
