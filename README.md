@@ -1,14 +1,4 @@
----
-page_type: sample
-languages:
-- nodejs
-products:
-- nodejs
-description: "This code is part of the Microsoft Learn module of the AKS workshop. It provides the API for the ratings application. The API connects to a MongoDB to store and retrieve data."
-urlFragment: "aksworkshop-ratings-api"
----
-
-# AKS Workshop - Api sample code
+# API Workshop - Api sample code
 
 <!-- 
 Guidelines on README format: https://review.docs.microsoft.com/help/onboard/admin/samples/concepts/readme-template?branch=master
