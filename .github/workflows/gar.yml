@@ -19,15 +19,15 @@ jobs:
           username: _json_key
           password: ${{ secrets.GAR_JSON_KEY }}
           
-      - name: Build and Push Container
-        run: |-
-          docker build -t "${{ env.GCP_REGISTRY_REGION }}-docker.pkg.dev/${{ env.GCP_PROJECT }}/${{ env.GCP_REGISTRY_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}" ./
-          docker push "${{ env.GCP_REGISTRY_REGION }}-docker.pkg.dev/${{ env.GCP_PROJECT }}/${{ env.GCP_REGISTRY_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }"
+ #     - name: Build and Push Container
+ #       run: |-
+ #         docker build -t "${{ env.GCP_REGISTRY_REGION }}-docker.pkg.dev/${{ env.GCP_PROJECT }}/${{ env.GCP_REGISTRY_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}" ./
+ #         docker push "${{ env.GCP_REGISTRY_REGION }}-docker.pkg.dev/${{ env.GCP_PROJECT }}/${{ env.GCP_REGISTRY_NAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }"
           
       - name: Build and push to GAR
         uses: docker/build-push-action@v2
         with:
           push: true
           #tags: ${{ env.GCP_REGISTRY_REGION }}/${{ env.GCP_PROJECT }}/${{ env.GCP_REGISTRY_NAME }}/${{ env.IMAGE_NAME }}:latest  
-          tags:  us-central1-docker.pkg.dev/oa-project-320014/{{ env.GCP_REGISTRY_NAME }}/ratings-api:${{ github.sha }}  
+          tags:  us-central1-docker.pkg.dev/oa-project-320014/${{ env.GCP_REGISTRY_NAME }}/ratings-api:${{ github.sha }}  
           
