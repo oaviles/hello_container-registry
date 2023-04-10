@@ -9,7 +9,7 @@ env:
   IMAGE_NAME: ratings-api
 
 jobs:
-  login:
+  build-image:
     runs-on: ubuntu-latest
     steps:
       - name: Login to GAR
