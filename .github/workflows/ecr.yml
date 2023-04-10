@@ -1,4 +1,4 @@
-name: Push image to ECR
+name: Push image to Amazon Elasic Container Rregistry (ECR)
 
 on: workflow_dispatch
 
